@@ -17,37 +17,25 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-github-changes');
 ```
 
-## The "github_changes" task
+## The "githubChanges" task
 
 ### Overview
-In your project's Gruntfile, add a section named `github_changes` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `githubChanges` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  github_changes: {
+  githubChanges: {
     options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+      // Owner and Repository options are mandatory
+      owner : 'streetlight',
+      repository : 'grunt-github-changes'
+    }
 })
 ```
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+All options that are valid with [github-changes](https://github.com/lalitkapoor/github-changes) can be used here.
 
 ### Usage Examples
 
@@ -57,27 +45,11 @@ In this example, the default options are used to do something with whatever. So 
 ```js
 grunt.initConfig({
   github_changes: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  github_changes: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+      owner : 'streetlight',
+      repository : 'grunt-github-changes',
+      pullsOnly : true
+    }
   },
 })
 ```
