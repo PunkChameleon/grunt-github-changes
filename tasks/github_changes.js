@@ -2,6 +2,7 @@
  * grunt-github-changes
  * https://github.com/streetlight/grunt-github-changes
  *
+ * Copyright (c) 2014 Nick Weingartner
  * Licensed under the BSD license.
  */
 
