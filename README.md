@@ -25,7 +25,7 @@ In your project's Gruntfile, add a section named `githubChanges` to the data obj
 ```js
 grunt.initConfig({
   githubChanges: {
-    default_options : {
+    dist : {
       options: {
         // Owner and Repository options are mandatory
         owner : 'streetlight',
@@ -48,7 +48,7 @@ The only necessary fields are owner and repository, and the rest are optional. B
 ```js
 grunt.initConfig({
   github_changes: {
-    default_options : {
+    dist : {
       options: {
         owner : 'streetlight', // MANDATORY
         repository : 'grunt-github-changes', // MANDATORY
