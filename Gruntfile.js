@@ -17,8 +17,7 @@ module.exports = function (grunt) {
     jshint: {
       all: [
         'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>'
+        'tasks/*.js'
       ],
       options: {
         jshintrc: '.jshintrc',
@@ -26,51 +25,17 @@ module.exports = function (grunt) {
       }
     },
 
-    // Before generating any new files, remove any previously-created files.
-    clean: {
-      tests: ['tmp']
-    },
-
     // Configuration to be run (and then tested).
     github_changes: {
       default_options: {
         options: {
-            owner : 'owner',
-            repository : 'repository',
-            branch : 'branch',
-            tagName : 'tagName',
-            auth : 'auth',
-            token : 'token',
-            file : 'file',
-            verbose : false,
-            host : 'host',
-            pathPrefix : 'pathPrefix',
-            noMerges : true,
-            onlyMerges : false,
-            onlyPulls : true,
-            useCommitBody : true,
-            orderSemver : false
+            owner : 'streetlight',
+            repository : 'grunt-github-changes',
+            file : 'CHANGELOG.md',
+            useCommitBody : true
         },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
       }
-    },
-
-    // Unit tests.
-    nodeunit: {
-      tests: ['test/*_test.js']
     }
-
   });
 
   // Actually load this plugin's task(s).
@@ -78,7 +43,7 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'github_changes', 'nodeunit']);
+  grunt.registerTask('test', ['github_changes']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
