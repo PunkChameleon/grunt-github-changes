@@ -1,6 +1,6 @@
 # grunt-github-changes
 
-> Grunt plugin to run github changes (changelog generator)
+> Grunt plugin to generates changelog using Github Changes
 
 ## Getting Started
 This plugin requires Grunt.
