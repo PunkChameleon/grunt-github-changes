@@ -32,7 +32,7 @@ module.exports = function (grunt) {
             repository : 'grunt-github-changes',
             file : 'CHANGELOG.md',
             useCommitBody : true
-        },
+        }
       }
     }
   });
