@@ -15,7 +15,7 @@ module.exports = function (grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('github_changes', 'Grunt plugin to run github changes (changelog generator)', function () {
+  grunt.registerMultiTask('githubChanges', 'Grunt plugin to run github changes (changelog generator)', function () {
 
     // Merge task-specific and/or target-specific options with these defaults.
     var done = this.async(),
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         console.error("Owner and Repository fields are mandatory");
     }
 
-    function createArgString(options) {
+    var createArgString = function (options) {
        var ghC = './node_modules/github-changes/bin/index.js',
            owner = '-o '+ options.owner,
            repository = '-r ' + options.repository,
@@ -77,13 +77,14 @@ module.exports = function (grunt) {
             useCommitBody,
             orderSemver
         ].join(" ");
-    }
-    var cp = exec(createArgString(options), {}, function (error, stdout, stderr) {
+    };
+
+    var cp = exec(createArgString(options), {}, function (error) {
         if (!error) {
             console.log("Changelog generated");
             done();
         } else {
-            grunt.warn(err);
+            grunt.warn(error);
         }
     });
 

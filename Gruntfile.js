@@ -20,13 +20,12 @@ module.exports = function (grunt) {
         'tasks/*.js'
       ],
       options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        jshintrc: '.jshintrc'
       }
     },
 
     // Configuration to be run (and then tested).
-    github_changes: {
+    githubChanges: {
       default_options: {
         options: {
             owner : 'streetlight',
@@ -43,7 +42,7 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['github_changes']);
+  grunt.registerTask('test', ['githubChanges']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
