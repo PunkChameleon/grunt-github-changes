@@ -18,7 +18,8 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('github_changes', 'Grunt plugin to run github changes (changelog generator)', function () {
 
     // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
+    var done = this.async(),
+       options = this.options({
         owner : 'owner',
         repository : 'repository',
         branch : null,
@@ -77,14 +78,13 @@ module.exports = function (grunt) {
             orderSemver
         ].join(" ");
     }
-    console.log(options);
-    console.log(createArgString(options));
-    var cp = exec('echo "HELLO"', function (error, stdout, stderr) {
-        console.log('stdout: ' + stdout);
-            console.log('stderr: ' + stderr);
-                if (error !== null) {
-                          console.log('exec error: ' + error);
-                              }
+    var cp = exec(createArgString(options), {}, function (error, stdout, stderr) {
+        if (!error) {
+            console.log("Changelog generated");
+            done();
+        } else {
+            grunt.warn(err);
+        }
     });
 
     var captureOutput = function (child, output) {
@@ -92,7 +92,6 @@ module.exports = function (grunt) {
     };
 
     captureOutput(cp.stdout, process.stdout);
-    exec(createArgString(options));
 
   });
 
