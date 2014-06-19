@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     githubChanges: {
-      default_options: {
+      dist: {
         options: {
             owner : 'streetlight',
             repository : 'grunt-github-changes',
