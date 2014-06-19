@@ -25,10 +25,12 @@ In your project's Gruntfile, add a section named `githubChanges` to the data obj
 ```js
 grunt.initConfig({
   githubChanges: {
-    options: {
-      // Owner and Repository options are mandatory
-      owner : 'streetlight',
-      repository : 'grunt-github-changes'
+    default_options : {
+      options: {
+        // Owner and Repository options are mandatory
+        owner : 'streetlight',
+        repository : 'grunt-github-changes'
+      }
     }
 })
 ```
@@ -46,22 +48,24 @@ The only necessary fields are owner and repository, and the rest are optional. B
 ```js
 grunt.initConfig({
   github_changes: {
-    options: {
-      owner : 'streetlight', // MANDATORY
-      repository : 'grunt-github-changes', // MANDATORY
-      branch : '', // optional string
-      tagName : '',// optional string
-      auth : '', // optional string
-      token : '', // optional string
-      file : '', // optional string
-      verbose : false, // optional boolean
-      host : '', // optional string
-      pathPrefix : '', // optional string
-      noMerges : false, // optional boolean
-      onlyMerges : false, // optional boolean
-      onlyPulls : false, // optional boolean
-      useCommitBody : false, // optional boolean
-      orderSemver : false // optional boolean
+    default_options : {
+      options: {
+        owner : 'streetlight', // MANDATORY
+        repository : 'grunt-github-changes', // MANDATORY
+        branch : '', // optional string
+        tagName : '',// optional string
+        auth : '', // optional string
+        token : '', // optional string
+        file : '', // optional string
+        verbose : false, // optional boolean
+        host : '', // optional string
+        pathPrefix : '', // optional string
+        noMerges : false, // optional boolean
+        onlyMerges : false, // optional boolean
+        onlyPulls : false, // optional boolean
+        useCommitBody : false, // optional boolean
+        orderSemver : false // optional boolean
+      }
     }
   },
 })
