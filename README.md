@@ -39,16 +39,29 @@ All options that are valid with [github-changes](https://github.com/lalitkapoor/
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+####  Using Options in task
+
+The only necessary fields are owner and repository, and the rest are optional. Below is how they can be passed in if desired. For more documentation on each field see the [github-changes](https://github.com/lalitkapoor/github-changes) repo.
 
 ```js
 grunt.initConfig({
   github_changes: {
     options: {
-      owner : 'streetlight',
-      repository : 'grunt-github-changes',
-      pullsOnly : true
+      owner : 'streetlight', // MANDATORY
+      repository : 'grunt-github-changes', // MANDATORY
+      branch : '', // optional string
+      tagName : '',// optional string
+      auth : '', // optional string
+      token : '', // optional string
+      file : '', // optional string
+      verbose : false, // optional boolean
+      host : '', // optional string
+      pathPrefix : '', // optional string
+      noMerges : false, // optional boolean
+      onlyMerges : false, // optional boolean
+      onlyPulls : false, // optional boolean
+      useCommitBody : false, // optional boolean
+      orderSemver : false // optional boolean
     }
   },
 })
