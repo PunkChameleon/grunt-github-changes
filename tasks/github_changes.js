@@ -42,7 +42,9 @@ module.exports = function (grunt) {
     }
 
     var createArgString = function (options) {
-       var ghC = './node_modules/github-changes/bin/index.js*',
+
+       var dirHack = __dirname.replace("/tasks", ""), // Terrible hack, need to fix
+           ghC = dirHack + '/node_modules/github-changes/bin/index.js',
            owner = '-o '+ options.owner,
            repository = '-r ' + options.repository,
            branch = options.branch ? '-b ' + options.branch : null,
