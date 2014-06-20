@@ -42,7 +42,7 @@ module.exports = function (grunt) {
     }
 
     var createArgString = function (options) {
-       var ghC = './node_modules/github-changes/bin/index.js',
+       var ghC = './node_modules/github-changes/bin/index.js*',
            owner = '-o '+ options.owner,
            repository = '-r ' + options.repository,
            branch = options.branch ? '-b ' + options.branch : null,
