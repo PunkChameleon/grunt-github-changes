@@ -61,6 +61,7 @@ module.exports = function (grunt) {
            orderSemver = options.orderSemver ? '--order-semver' : null;
 
         return [
+            process.execPath,
             ghC,
             owner,
             repository,
