@@ -2,6 +2,8 @@
 
 > Grunt plugin to generates changelog using Github Changes
 
+[![NPM](https://nodei.co/npm/grunt-github-changes.png)](https://nodei.co/npm/grunt-github-changes/)
+
 ## Getting Started
 This plugin requires Grunt.
 
