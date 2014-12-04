@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 
         return [
             process.execPath,
-            ghC,
+            JSON.stringify(ghC),
             owner,
             repository,
             branch,
