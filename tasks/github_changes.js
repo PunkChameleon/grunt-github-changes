@@ -81,7 +81,9 @@ module.exports = function (grunt) {
         ].join(" ");
     };
 
-    var cp = exec(createArgString(options), {}, function (error) {
+    var command = createArgString(options);
+    grunt.verbose.writeln(command);
+    var cp = exec(command, {}, function (error) {
         if (!error) {
             console.log("Changelog generated");
             done();
