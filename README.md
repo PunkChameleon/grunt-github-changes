@@ -49,14 +49,14 @@ The only necessary fields are owner and repository, and the rest are optional. B
 
 ```js
 grunt.initConfig({
-  github_changes: {
+  githubChanges: {
     dist : {
       options: {
         owner : 'streetlight', // MANDATORY
         repository : 'grunt-github-changes', // MANDATORY
         branch : '', // optional string
         tagName : '',// optional string
-        auth : '', // optional string
+        auth : false, // optional boolean
         token : '', // optional string
         file : '', // optional string
         verbose : false, // optional boolean
@@ -80,4 +80,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2014 Nick Weingartner. Licensed under the MIT license.
+Copyright (c) 2015 Nick Weingartner. Licensed under the MIT license.
