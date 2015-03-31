@@ -1,7 +1,7 @@
 {
   "name": "grunt-github-changes",
   "version": "0.0.5",
-  "description": "Grunt plugin to run github changes (changelog generator)",
+  "description": "Grunt plugin to run github-changes (changelog generator)",
   "homepage": "https://github.com/streetlight/grunt-github-changes",
   "repository": "https://github.com/streetlight/grunt-github-changes.git",
   "author": {
@@ -26,6 +26,6 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "github-changes": "0.0.11"
+    "github-changes": "0.0.16"
   }
 }
