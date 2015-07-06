@@ -61,7 +61,7 @@ module.exports = function (grunt) {
            orderSemver = options.orderSemver ? '--order-semver' : null;
 
         return [
-            process.execPath,
+            JSON.stringify(process.execPath),
             JSON.stringify(ghC),
             owner,
             repository,
@@ -78,7 +78,9 @@ module.exports = function (grunt) {
             onlyPulls,
             useCommitBody,
             orderSemver
-        ].join(" ");
+        ]
+        .filter(function(n) { return n != undefined})
+        .join(" ");
     };
 
     var command = createArgString(options);
