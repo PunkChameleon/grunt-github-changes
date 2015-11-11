@@ -1,6 +1,6 @@
 {
   "name": "grunt-github-changes",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Grunt plugin to run github-changes (changelog generator)",
   "homepage": "https://github.com/streetlight/grunt-github-changes",
   "repository": "https://github.com/streetlight/grunt-github-changes.git",
@@ -14,18 +14,18 @@
   ],
   "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">=0.10.0"
   },
   "license": "MIT",
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt": "~0.4.2",
-    "load-grunt-tasks": "~0.3.0"
+    "grunt-contrib-jshint": "~0.11.3",
+    "grunt": "~0.4.5",
+    "load-grunt-tasks": "~3.3.0"
   },
   "scripts": {
     "test": "grunt test"
   },
   "dependencies": {
-    "github-changes": "0.0.16"
+    "github-changes": "1.0.0"
   }
 }
