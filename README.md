@@ -30,7 +30,7 @@ grunt.initConfig({
     dist : {
       options: {
         // Owner and Repository options are mandatory
-        owner : 'streetlight',
+        owner : 'PunkChameleon',
         repository : 'grunt-github-changes'
       }
     }
@@ -52,7 +52,7 @@ grunt.initConfig({
   githubChanges: {
     dist : {
       options: {
-        owner : 'streetlight', // MANDATORY
+        owner : 'PunkChameleon', // MANDATORY
         repository : 'grunt-github-changes', // MANDATORY
         branch : '', // optional string
         tagName : '',// optional string
