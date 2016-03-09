@@ -28,7 +28,7 @@ module.exports = function (grunt) {
     githubChanges: {
       dist: {
         options: {
-            owner : 'streetlight',
+            owner : 'PunkChameleon',
             repository : 'grunt-github-changes',
             file : 'CHANGELOG.md',
             useCommitBody : true
