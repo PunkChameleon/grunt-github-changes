@@ -26,6 +26,6 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "github-changes": "1.0.0"
+    "github-changes": "1.0.2"
   }
 }
