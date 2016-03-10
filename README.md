@@ -59,6 +59,7 @@ grunt.initConfig({
         auth : false, // optional boolean
         token : '', // optional string
         file : '', // optional string
+        dateFormat : '' // optional string
         verbose : false, // optional boolean
         host : '', // optional string
         pathPrefix : '', // optional string
