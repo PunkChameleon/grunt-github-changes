@@ -1,6 +1,6 @@
 {
   "name": "grunt-github-changes",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Grunt plugin to run github-changes (changelog generator)",
   "homepage": "https://github.com/PunkChameleon/grunt-github-changes",
   "repository": "https://github.com/PunkChameleon/grunt-github-changes.git",
